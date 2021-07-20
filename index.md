@@ -18,4 +18,4 @@
 
 # 2、目录
 
-- [总书单](https://wold9168.github.io/Myblog/BookList.html)
+- [总书单](https://wold9168.github.io/BookList.html)
