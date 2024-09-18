@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://wold9168.github.io/'
 languageCode = 'en-us'
 title = '玉华斋'
 theme = "hyde"
