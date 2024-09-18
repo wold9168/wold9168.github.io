@@ -1,0 +1,12 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = '玉华斋'
+theme = "hyde"
+
+[Menus]
+  main = [
+      {Name = "Github", URL = "https://github.com/wold9168/"}
+  ]
+
+[params]
+  description = "无有仙居洞府，多少望公书斋"
