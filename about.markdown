@@ -1,18 +1,60 @@
 ---
 layout: page
-title: About
+title: 关于我
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+我是 **wold9168**，学生、开发者、业余作家、《东方Project》系列作品粉丝、前二次元。我的另一个网名是「東雲寺貍」，因而有了「阿寺」的简称。这个简称进一步派生出了「a4」「24」这样的昵称。
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+我的表字是「若东」。因此我有时候也会以这个名字示人。
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+## 技术栈
 
+我编程语言方面的技术栈包括：Bash、C、C++、Golang、Java、Python、Scala。其中 C 和 Golang 的掌握程度稍好些，其他的编程语言大部分时候只能算个添头。
 
-[jekyll-organization]: https://github.com/jekyll
+工具语言方面，我会使用 Typst、LaTeX 和 Markdown；JSON、Yaml 我也基本都能熟练使用。但是我不太会使用 SQL。
+
+我专注于容器化技术、数据库、数据科学、大数据技术、网络应用后端开发这些技能的学习。
+
+我暂时对前端一无所知、对 AI 所知甚少、对软件打包所知甚少。
+
+这些在我的 [GitHub Profile](https://github.com/wold9168) 上都有很好的体现。
+
+系统方面，我曾是 Arch Linux 用户，后转至 Debian，现主力使用 Fedora。虽偏好 Fedora 的集成特性，但对其他发行版亦持开放态度。我已经不再使用 Windows。
+
+我使用 [Zed](https://zed.dev) 作为我的主要编辑器。
+
+我坚定支持开源软件和开源文化。
+
+## 生活
+
+我现在就读于哈尔滨工业大学，曾是[哈尔滨工业大学 Linux 开源学生社团（HITLUG，前 Linux 开源学生俱乐部）](https://hitlug.org)的社团主席。正在准备考研。（~~但是大概率二战~~）
+
+我热爱茶、阅读和计算机，十分喜欢在在线群聊吹水。
+
+喜欢吃好吃的东西——因而体重「居高不下」。 ~~是一等一的肥猪~~
+
+我现在对文言文、香水很感兴趣。或许我可以被骂一句「臭文青」（
+
+我不碰烟酒。
+
+我使用「」替代“”。英式双引号在大面积中文排版里不如直角引号显眼。——并且直角引号输入起来很方便，可以被方括号的两个键代替，而不是让引号键「轮流扮演」。
+
+由于在政治方面的理论水平不高，所以我绝大部分时候避免谈及政治。不过有一点不必避讳，我是土生土长的中国人，我热爱我们的国家，热爱党和人民。
+我给我的人生放的一个「卫星」是「为人生谋价值，为人民谋福祉，为人文谋兴复，为人类谋进步」。
+
+我现在开始用 jekyll 记录生活，尤其是技术生活。
+
+## 忌讳
+
+我没有特别的忌讳。（即现在互联网所说的「避雷」）
+
+如果你乐意的话，你可以和我相处得很愉快，至少对我而言，有人和我说话我就会很愉快。自带初始好感度加成了属于是。
+
+不过我的确不太喜欢别人对我的生活指手画脚而经常对别人的生活说三道四。这点可以由你我在沟通的过程中共同监督。
+
+## 联系我
+- 个人邮箱：moewold@outlook.com
+- 工作/技术联系邮箱：connect2wold9168@outlook.com
+
+在互联网上请尽量通过邮件向我发送信息。
