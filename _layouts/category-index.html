@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+{%- comment -%}
+从页面路径中提取分类标签
+例如：path = category/tech/index.html → categories = ["tech"]
+      path = category/linux/tips/index.html → categories = ["linux", "tips"]
+{%- endcomment -%}
+
+{%- assign path_parts = page.path | split: '/' -%}
+{%- assign cat_list = "" | split: "" -%}
+
+{%- for part in path_parts -%}
+  {%- unless part == "category" or part == "index.html" or part == "" -%}
+    {%- assign cat_list = cat_list | push: part -%}
+  {%- endunless -%}
+{%- endfor -%}
+
+{%- if cat_list.size == 0 -%}
+  <p>未指定分类。</p>
+{%- else -%}
+  <h1>分类：{{ cat_list | join: " / " }}</h1>
+
+  {%- comment -%}
+  筛选同时包含所有 cat_list 中分类的文章
+  {%- endcomment -%}
+  {%- assign filtered_posts = site.posts -%}
+  {%- for cat in cat_list -%}
+    {%- assign temp_posts = "" | split: "" -%}
+    {%- for post in filtered_posts -%}
+      {%- if post.categories contains cat -%}
+        {%- assign temp_posts = temp_posts | push: post -%}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- assign filtered_posts = temp_posts -%}
+  {%- endfor -%}
+
+  <ul>
+  {%- for post in filtered_posts -%}
+    <li>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+    </li>
+  {%- endfor -%}
+  </ul>
+
+  {%- if filtered_posts.size == 0 -%}
+    <p>暂无文章。</p>
+  {%- endif -%}
+{%- endif -%}
