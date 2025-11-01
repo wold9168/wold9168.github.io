@@ -4,7 +4,7 @@ title: categories
 ---
 
 {% for category in site.categories %}
-  <h3><a href="{{ site.url }}/{{ category[0] }}">{{ category[0] }}</a></h3>
+  <h3><a href="/{{ category[0] }}">{{ category[0] }}</a></h3>
   <ul>
     {% for post in category[1] %}
       <li>
