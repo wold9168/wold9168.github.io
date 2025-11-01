@@ -3,14 +3,29 @@ layout: post
 title: categories
 ---
 
-{% for category in site.categories %}
-  <h3><a href="/{{ category[0] }}">{{ category[0] }}</a></h3>
-  <ul>
-    {% for post in category[1] %}
-      <li>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
-      </li>
-    {% endfor %}
-  </ul>
+{% assign all_paths = "" %}
+{% for post in site.posts %}
+  {% if post.categories.size > 0 %}
+    {% assign path = post.categories | join: "/" %}
+    {% assign all_paths = all_paths | append: "," | append: path %}
+  {% endif %}
+{% endfor %}
+
+{% assign unique_paths = all_paths | split: "," | uniq %}
+
+{% for path in unique_paths %}
+  {% unless path == empty %}
+    <h3><a href="/{{ path }}">{{ path }}</a></h3>
+    <ul>
+      {% for post in site.posts %}
+        {% assign post_path = post.categories | join: "/" %}
+        {% if post_path == path %}
+          <li>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% endunless %}
 {% endfor %}
