@@ -304,9 +304,7 @@ layout: category-index # 取决于你把前面的代码复制到 _layout/ 以后
 
 {% assign unique_paths = all_paths | split: "," | uniq %}
 
-{%{% highlight liquid %}
-{% raw %}
- for path in unique_paths %}
+{% for path in unique_paths %}
   {% unless path == empty %}
     <h3><a href="/{{ path }}">{{ path }}</a></h3>
     <ul>
@@ -322,8 +320,6 @@ layout: category-index # 取决于你把前面的代码复制到 _layout/ 以后
     </ul>
   {% endunless %}
 {% endfor %}
-{% endraw %}
-{% endhighlight %}
 ```
 
 这是前面所有`categories.html`的最新版本。加入了对各 category 的`index.html`的路由以后，我才发现 jekyll 并不原生支持多级 category。不过我们自有办法。
