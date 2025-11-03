@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "为了 jekyll 开始使用 CI/CD"
-tags: [jekyll, javascript]
+tags: [jekyll, yaml, cicd]
 author:
 - wold9168
-math: true
+math: false
 render_with_liquid: false
 ---
 
