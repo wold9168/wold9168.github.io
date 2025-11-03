@@ -1,0 +1,57 @@
+name: Deploy Jekyll site to Pages (Fedora 42)
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # runner OS, but we override with container
+    container: fedora:rawhide  # Fedora 42 (development branch)
+
+    steps:
+      - name: Install system dependencies
+        run: |
+          sudo dnf install -y ruby ruby-devel openssl-devel redhat-rpm-config gcc-c++ @development-tools
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify Ruby and Bundler versions
+        run: |
+          ruby -v   # should be ~3.4.5
+          bundle -v # should be 2.6.9
+
+      - name: Install gems
+        run: |
+          bundle install --jobs 4
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
