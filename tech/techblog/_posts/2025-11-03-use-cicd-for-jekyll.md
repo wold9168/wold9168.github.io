@@ -15,11 +15,17 @@ render_with_liquid: false
 遂与 AI 语：
 
 > 打住。这样吧，我希望CI里面使用和我本机相同版本的ruby和bundle。
+>
 > 我本机使用的是fedora42自带的ruby和bundle，版本如下：
+>
 > ❯ ruby -v
+>
 > ruby 3.4.5 (2025-07-16 revision 20cda200d3) +PRISM [x86_64-linux]
+>
 > ❯ bundle -v
+>
 > Bundler version 2.6.9
+>
 > 你想办法用fedora完成这个CI流程，或者直接用我提供在这里的这个版本
 
 最后根据 jekyll 官方文档又剪裁了一番，现在使用的 CI 流程是这样的：
