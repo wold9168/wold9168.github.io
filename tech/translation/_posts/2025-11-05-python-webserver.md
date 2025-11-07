@@ -278,7 +278,7 @@ while True:
 
 ## 404 - 未找到
 
-我们还没完成！如果你尝试请求一个不存在的文件，比如 `http://localhost:8000/hello.html`，会发生什么？
+还没完呢！如果你尝试请求一个不存在的文件，比如 `http://localhost:8000/hello.html`，会发生什么？
 
 ```text
 GET /hello.html HTTP/1.1
