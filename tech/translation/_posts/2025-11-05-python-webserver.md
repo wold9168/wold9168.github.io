@@ -3,7 +3,7 @@ layout: post
 title: "翻译：从零开始用 Python 构建一个基础 HTTP 服务器 "
 tags: [python, http]
 author:
-- wold9168
+  - wold9168
 math: false
 render_with_liquid: false
 ---
@@ -14,11 +14,39 @@ render_with_liquid: false
 
 该 blog 的作者是 João Ventura，一位来自葡萄牙的软件工程师前辈。他 blog 的原文链接为：https://joaoventura.net/blog/2017/python-webserver/
 
+# 原作者的授权
+
+> Hello,
+>
+> sure, no problem, hope it provides good value for all chinese speakers!
+>
+> Regards,
+> João Ventura
+>
+> Às 13:05 de 05/11/25, wold9168 escreveu:
+>
+> > Dear João Ventura,
+> >
+> > Thank you so much for your excellent blog post, Building a basic HTTP Server from scratch in Python . It helped me clearly explain to a friend how to build a web server in Python.
+> >
+> > Inspired by your work, I've translated the article into Chinese—initially using AI assistance and then carefully polishing the text by hand. I' d be truly grateful for your permission to share the translation publicly. The translation is now published here:
+> > https://wold9168.github.io/tech/translation/2025/11/05/python-webserver.html
+> >
+> > I'm writing to kindly ask for your permission to share this translation publicly. Of course, full credit is given to you, and I've linked back to your original post at the top of the translation.
+> >
+> > Thank you again for your clear writing and for sharing your knowledge with the community!
+> >
+> > Best regards,
+> > wold9168
+
+---
+
 以下是中文翻译（AI+人工校对+画蛇添足）：
 
 ---
 
 # 从零开始用 Python 构建一个基础 HTTP 服务器
+
 **2017年2月9日**
 
 本质上，现代 Web 服务不过是客户端与服务器之间进行文本的来回传输。作为开发者，我们通常要使用 Web 框架来帮助我们构建要发送给客户端的字符串。Web 框架通过解析传入的 HTTP 请求（其实只是一段文本）、调用相应的函数，并构建出一个字符串用作响应（通常使用模板）来将我们从底层“文本现实”中抽象出来。最后，客户端解析这些字符串并执行相应操作。
@@ -206,14 +234,14 @@ while True:
 
 ```html
 <html>
-<head>
+  <head>
     <title>Hello World</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Hello World!</h1>
     <p>Welcome to the index.html web page.</p>
     <p>Here's a link to <a href="ipsum.html">Ipsum</a></p>
-</body>
+  </body>
 </html>
 ```
 
@@ -259,18 +287,19 @@ while True:
 
 ```html
 <html>
-<head>
+  <head>
     <title>Ipsum</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Ipsum!</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Pellentesque tincidunt libero diam, nec imperdiet libero
-        sodales quis. Nulla in pulvinar sem. Vivamus placerat
-        ullamcorper sagittis. Proin varius, erat sed egestas semper,
-        enim lectus viverra diam, id placerat est augue et turpis.
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+      tincidunt libero diam, nec imperdiet libero sodales quis. Nulla in
+      pulvinar sem. Vivamus placerat ullamcorper sagittis. Proin varius, erat
+      sed egestas semper, enim lectus viverra diam, id placerat est augue et
+      turpis.
     </p>
-</body>
+  </body>
 </html>
 ```
 
