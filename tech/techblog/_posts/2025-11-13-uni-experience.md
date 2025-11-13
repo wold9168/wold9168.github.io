@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "全平台统一体验"
+title: "Kitty + NVim 初尝试：为了全平台统一体验"
 tags: [vim, nvim, console, shell, git, operation ]
 author:
 - wold9168
