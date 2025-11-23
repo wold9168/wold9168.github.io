@@ -64,3 +64,6 @@ exclude:
 # https://github.com/jekyll/minima/issues/815#issuecomment-2440028795
 sass:
   quiet_deps: true
+
+timezone: Asia/Shanghai
+
