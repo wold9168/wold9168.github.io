@@ -17,7 +17,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest  # runner OS, but we override with container
-    container: fedora:rawhide  # Fedora 42 (development branch)
+    container: fedora:42  # Fedora 42
 
     steps:
       - name: Install system dependencies
