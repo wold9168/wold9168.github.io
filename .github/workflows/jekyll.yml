@@ -17,7 +17,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest  # runner OS, but we override with container
-    container: fedora:42  # Fedora 42
+    container: fedora:43  # Fedora 43
 
     steps:
       - name: Install system dependencies
@@ -29,11 +29,12 @@ jobs:
 
       - name: Verify Ruby and Bundler versions
         run: |
-          ruby -v   # should be ~3.4.5
-          bundle -v # should be 2.6.9
+          ruby -v
+          bundle -v
 
       - name: Install gems
         run: |
+          bundle config set --global mirror.https://rubygems.org https://mirrors.tuna.tsinghua.edu.cn/rubygems
           bundle install --jobs 4
 
       - name: Build Jekyll site
