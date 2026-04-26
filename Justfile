@@ -3,12 +3,16 @@ default_template_filename := "_posts-template.md"
 default_path := "tech/techblog"
 default_post_folder := "_posts"
 today_date := `date "+%Y-%m-%d"`
+exist_check filename path=(default_path / default_post_folder):
+    @if [ -e '{{path}}/{{today_date}}-{{filename}}.md' ]; then \
+        echo "ERROR: File exists." >&2; \
+        exit 1; \
+    fi
 # Create a new blog post
 # Usage: just new POST_NAME [PATH]
-new filename path=(default_path / default_post_folder):
+new filename path=(default_path / default_post_folder): (exist_check filename path)
     mkdir -p {{path}}
     cat {{template_path}}/{{default_template_filename}} > {{path}}/{{today_date}}-{{filename}}.md
-
 # Create a new blog post with editor opening it.
 # Usage: just newwith [editor] [POST_NAME] [PATH]
 # [editor] will use $EDITOR as default
