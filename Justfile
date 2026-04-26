@@ -3,6 +3,8 @@ default_template_filename := "_posts-template.md"
 default_path := "tech/techblog"
 default_post_folder := "_posts"
 today_date := `date "+%Y-%m-%d"`
+# Check if a post is existed
+# Usage: just exist_check POST_NAME [PATH]
 exist_check filename path=(default_path / default_post_folder):
     @if [ -e '{{path}}/{{today_date}}-{{filename}}.md' ]; then \
         echo "ERROR: File exists." >&2; \
