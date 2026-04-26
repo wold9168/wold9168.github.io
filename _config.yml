@@ -60,6 +60,7 @@ header_pages:
 #   - vendor/ruby/
 exclude:
   - docs/
+  - templates/
 
 # https://github.com/jekyll/minima/issues/815#issuecomment-2440028795
 sass:
