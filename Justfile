@@ -17,6 +17,11 @@ newwith editor=(env_var("EDITOR")) filename="new-post" path=(default_path / defa
         echo "ERROR: EDITOR environment variable is empty or not set (or editor argument missing)." >&2; \
         exit 1; \
     fi
+    @if ! command -v {{editor}} > /dev/null 2>&1; then \
+        echo "ERROR: EDITOR environment variable is set but the binary does not exist." >&2; \
+        echo "WARN: The template is applied." >&2; \
+        exit 1; \
+    fi
     {{editor}} {{path}}/{{today_date}}-{{filename}}.md
 # Single file auto-commit workflow
 # Usage: just acsingle
