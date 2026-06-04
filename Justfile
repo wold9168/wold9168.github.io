@@ -12,9 +12,9 @@ exist_check filename path=(default_path / default_post_folder):
     fi
 # Create a new blog post
 # Usage: just new POST_NAME [PATH]
-new filename path=(default_path / default_post_folder): (exist_check filename path)
-    mkdir -p {{path}}
-    cat {{template_path}}/{{default_template_filename}} > {{path}}/{{today_date}}-{{filename}}.md
+new filename path=(default_path): (exist_check filename path/default_post_folder)
+    mkdir -p '{{path}}/{{default_post_folder}}'
+    cat '{{template_path}}/{{default_template_filename}}' > '{{path}}/{{default_post_folder}}/{{today_date}}-{{filename}}.md'
 # Create a new blog post with editor opening it.
 # Usage: just newwith [editor] [POST_NAME] [PATH]
 # [editor] will use $EDITOR as default
