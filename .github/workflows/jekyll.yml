@@ -25,7 +25,7 @@ jobs:
           sudo dnf install -y ruby ruby-devel openssl-devel redhat-rpm-config gcc-c++ @development-tools
 
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Verify Ruby and Bundler versions
         run: |
