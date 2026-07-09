@@ -1,4 +1,4 @@
-name: Deploy Jekyll site to Pages (Fedora 42)
+name: Deploy Jekyll site to Pages (Fedora 43)
 
 on:
   push:
