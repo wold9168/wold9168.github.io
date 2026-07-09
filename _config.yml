@@ -38,6 +38,7 @@ header_pages:
   - about.markdown
   - categories.html
   - tags.html
+  - friends.markdown
 
 # Exclude from processing.
 # The following items will not be processed, by default.
