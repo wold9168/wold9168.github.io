@@ -17,7 +17,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest  # runner OS, but we override with container
-    container: fedora:43  # Fedora 43
+    container: fedora:44  # Fedora 43
 
     steps:
       - name: Install system dependencies
