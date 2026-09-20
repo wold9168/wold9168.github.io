@@ -28,7 +28,7 @@ permalink: /about/
 
 系统方面，我曾是 Arch Linux 用户，后转至 Debian，现主力使用 Fedora。虽偏好 Fedora 的集成特性，但对其他发行版亦持开放态度。我已经不再使用 Windows。我对红帽系的技术没有抵触情绪。我希望学习使用 NixOS。我觉得使用函数式语言「决定性」地配置一台设备是优雅的。
 
-我使用 [Zed](https://zed.dev) 和 VSCodium 作为我的主要编辑器。我不介意在工程项目中使用 LLM。我现在最常使用的模型是 [DeepSeek V4](https://deepseek.com)，以[opencode](https://opencode.ai/) 为主要 Agent。
+我使用 [NeoVim](https://neovim.io)([LazyVim](https://www.lazyvim.org))、 [Zed](https://zed.dev) 和 VSCodium 作为我的主要编辑器。我不介意在工程项目中使用 LLM。我现在最常使用的模型是 [DeepSeek V4.1](https://deepseek.com)，以 [opencode](https://opencode.ai/) 和 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 为主要 Agent。
 
 我坚定支持开源软件和开源文化。我倾向于使用开源工具链。
 
